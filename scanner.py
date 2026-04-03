@@ -1,6 +1,11 @@
 from services.scanner_service import run_scanner
 
+print("🚀 Running AI Stock Scanner...")
+
 results = run_scanner()
 
-for r in results:
-    print(r)
+if results:
+    for r in results:
+        print(r)
+else:
+    print("❌ No signal found")
